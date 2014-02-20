@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
-
+@interface LoginViewController : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate, UITextFieldDelegate> {
+    
+    IBOutlet UITextField * email;
+    IBOutlet UITextField * password;
+}
+-(IBAction)login:(id)sender;
 @end

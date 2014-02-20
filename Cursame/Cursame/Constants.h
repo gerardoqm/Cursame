@@ -6,9 +6,6 @@
 //  Copyright (c) 2014 Gerardo Quintanar Morales. All rights reserved.
 //
 
-#ifndef Cursame_Constants_h
-#define Cursame_Constants_h
 
-
-
-#endif
+#define kPruebas @"https://pruebas.cursa.me"
+#define kProduccion @"https://cursa.me"

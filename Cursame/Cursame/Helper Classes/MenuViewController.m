@@ -16,6 +16,13 @@
 @implementation MenuViewController
 @synthesize cellIdentifier;
 
+
+- (void)viewDidLoad
+{
+    NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [menuTableView selectRowAtIndexPath:defaultIndexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
+
+}
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -28,15 +35,16 @@
 	return (section == 0) ? 4 : 6;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return (section == 0) ? @"Navigation" : @"Menu Animation";
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//	return (section == 0) ? @"Navigation" : @"Menu Animation";
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
-	
+    cell.selectedBackgroundView = [[UIView alloc] init];
+    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:31/255 green:31/255 blue:31/255 alpha:1.0];
 	if (indexPath.section == 0)
 	{
 		switch (indexPath.row)
@@ -93,6 +101,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+
+    
 	UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
 															 bundle: nil];
 	

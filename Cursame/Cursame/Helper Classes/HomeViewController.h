@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "SlideNavigationController.h"
 
-@interface HomeViewController : UIViewController <SlideNavigationControllerDelegate>
+@interface HomeViewController : UIViewController <SlideNavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+{
+    IBOutlet UILabel * testLabel;
+    IBOutlet UITableView *homeTableView;
+    NSMutableArray *publicationsFeed;
 
-- (IBAction)bounceMenu:(id)sender;
+}
+@property(nonatomic,strong) NSMutableArray *publicationsFeed;
 
+-(IBAction)bounceMenu:(id)sender;
+-(void)getPublications;
 @end

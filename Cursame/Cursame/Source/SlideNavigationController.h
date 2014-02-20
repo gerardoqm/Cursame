@@ -27,6 +27,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "MBProgressHUD.h"
 
 @protocol SlideNavigationControllerDelegate <NSObject>
 @optional
@@ -40,7 +41,7 @@ typedef  enum{
 }Menu;
 
 @protocol SlideNavigationContorllerAnimator;
-@interface SlideNavigationController : UINavigationController <UINavigationControllerDelegate>
+@interface SlideNavigationController : UINavigationController <UINavigationControllerDelegate,MBProgressHUDDelegate>
 
 @property (nonatomic, assign) BOOL avoidSwitchingToSameClassViewController;
 @property (nonatomic, assign) BOOL enableSwipeGesture;
@@ -51,6 +52,8 @@ typedef  enum{
 @property (nonatomic, assign) CGFloat portraitSlideOffset;
 @property (nonatomic, assign) CGFloat landscapeSlideOffset;
 @property (nonatomic, strong) id <SlideNavigationContorllerAnimator> menuRevealAnimator;
+@property (nonatomic, strong) MBProgressHUD *HUD;
+
 
 + (SlideNavigationController *)sharedInstance;
 - (void)switchToViewController:(UIViewController *)viewController withCompletion:(void (^)())completion;
