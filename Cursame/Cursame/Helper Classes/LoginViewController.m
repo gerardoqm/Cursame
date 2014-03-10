@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "HomeViewController.h"
 #import "Constants.h"
+#import "CursameResponse.h"
+#import "CursameUser.h"
 
 @interface LoginViewController ()
 
@@ -28,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    appDelegate = [[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view.
 
 #pragma mark -
@@ -88,19 +91,27 @@
              
              // Received data
              
-             NSString *loginResponse = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
-             NSLog(@"loginResponse: %@",loginResponse);
-             
              NSError *jsonParsingError = nil;
+             
+    
+             
+             NSString *loginResponse = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
+             //NSLog(@"loginResponse: %@",loginResponse);
+             
              
              //TODO: Interpretar respuesta
              NSDictionary *JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
              NSDictionary *JSONResponse = [JSONData objectForKey:@"response"];
              
+             appDelegate.cursameResponse = [[CursameResponse alloc] initWithDictionary:JSONResponse];
+
+             //appDelegate.cursameResponse = [appDelegate.cursameResponse initWithDictionary:JSONResponse];
+             //appDelegate.cursameResponse.user = [ appDelegate.cursameResponse.user init initWithDictionary:appDelegate.cursameResponse.]
+
              NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
              
              // saving an NSString
-             [prefs setValue:[NSString stringWithString:[JSONResponse objectForKey:@"token"]] forKey:@"token"];
+             [prefs setValue:[NSString stringWithString:appDelegate.cursameResponse.token] forKey:@"token"];
              [prefs synchronize];
              
 

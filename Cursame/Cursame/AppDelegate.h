@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "SlideNavigationController.h"
 #import "MenuViewController.h"
+#import "CursameResponse.h"
+#import "Publications.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    CursameResponse *cursameResponse;
+    NSMutableArray *publicationsFeed;
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) CursameResponse *cursameResponse;
+@property (strong, nonatomic) NSMutableArray *publicationsFeed;
 
 @end

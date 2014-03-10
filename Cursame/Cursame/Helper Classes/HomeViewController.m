@@ -8,12 +8,16 @@
 
 #import "HomeViewController.h"
 #import "Constants.h"
+#import "Publications.h"
 
 @implementation HomeViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    appDelegate = [[UIApplication sharedApplication] delegate];
+
     testLabel.text = @"TEST";
     //https://pruebas.cursa.me/api/api/publications.json?type=Network&auth_token=LvsBEYzoxWXokjwZZCY3&limit=20&page=3
 
@@ -53,20 +57,20 @@
          {
              
              
-             
+
              // Received data
-             
-             NSString *response = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
+
+             NSString *response           = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
              NSLog(@"response: %@",response);
-             
-             NSError *jsonParsingError = nil;
-             
+
+             NSError *jsonParsingError    = nil;
+
              //TODO: Interpretar respuesta
-             NSDictionary *JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
-             publicationsFeed = [JSONData objectForKey:@"publications"];
-             
+             NSDictionary *JSONData       = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
+             appDelegate.publicationsFeed = [JSONData objectForKey:@"publications"];
+
              [homeTableView reloadData];
-             
+
              [[[SlideNavigationController sharedInstance] HUD] hide:YES];
 
              
@@ -95,6 +99,8 @@
 
 #pragma mark - SlideNavigationController Methods -
 
+
+
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu
 {
 	return YES;
@@ -102,6 +108,7 @@
 
 - (BOOL)slideNavigationControllerShouldDisplayRightMenu
 {
+    self.view.backgroundColor = [UIColor colorWithRed:0.692 green:1.000 blue:0.827 alpha:1.000];
 	return YES;
 }
 
@@ -123,7 +130,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [publicationsFeed count];
+    return [appDelegate.publicationsFeed count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -156,7 +163,8 @@
     }
     
     
-    NSDictionary *publication = [publicationsFeed objectAtIndex:[indexPath section]];
+    NSDictionary *publication = [appDelegate.publicationsFeed objectAtIndex:[indexPath section]];
+    
 //    NSDictionary *publicationDetails = [publication objectForKey:@"publication"];
 //    NSDictionary *user = [tweet objectForKey:@"user"];
     UILabel *labelPublication = (UILabel *)[cell viewWithTag:100];

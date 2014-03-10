@@ -7,6 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0833E418C040FA00C9E9E5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0833E318C040FA00C9E9E5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DAB4A19418C594C10028FA1B /* Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A13E18C594C00028FA1B /* Avatar.m */; };
+		DAB4A19518C594C10028FA1B /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14018C594C00028FA1B /* Comments.m */; };
+		DAB4A19618C594C10028FA1B /* Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14218C594C00028FA1B /* Compress.m */; };
+		DAB4A19718C594C10028FA1B /* CourseIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14418C594C00028FA1B /* CourseIndex.m */; };
+		DAB4A19818C594C10028FA1B /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14618C594C00028FA1B /* Courses.m */; };
+		DAB4A19918C594C10028FA1B /* Coverphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14818C594C00028FA1B /* Coverphoto.m */; };
+		DAB4A19A18C594C10028FA1B /* Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14B18C594C00028FA1B /* Expanded.m */; };
+		DAB4A19B18C594C10028FA1B /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14D18C594C00028FA1B /* Feed.m */; };
+		DAB4A19C18C594C10028FA1B /* Head.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14F18C594C00028FA1B /* Head.m */; };
+		DAB4A19D18C594C10028FA1B /* ImageFront.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15118C594C00028FA1B /* ImageFront.m */; };
+		DAB4A19E18C594C10028FA1B /* Likes.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15318C594C00028FA1B /* Likes.m */; };
+		DAB4A19F18C594C10028FA1B /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15518C594C00028FA1B /* Logo.m */; };
+		DAB4A1A018C594C10028FA1B /* Mini.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15718C594C00028FA1B /* Mini.m */; };
+		DAB4A1A118C594C10028FA1B /* Modern.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15918C594C00028FA1B /* Modern.m */; };
+		DAB4A1A218C594C10028FA1B /* Mosaic.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15B18C594C00028FA1B /* Mosaic.m */; };
+		DAB4A1A318C594C10028FA1B /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15D18C594C00028FA1B /* Network.m */; };
+		DAB4A1A418C594C10028FA1B /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A15F18C594C00028FA1B /* Profile.m */; };
+		DAB4A1A518C594C10028FA1B /* Publication.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16118C594C00028FA1B /* Publication.m */; };
+		DAB4A1A618C594C10028FA1B /* Publications.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16318C594C00028FA1B /* Publications.m */; };
+		DAB4A1A718C594C10028FA1B /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16518C594C00028FA1B /* Response.m */; };
+		DAB4A1A818C594C10028FA1B /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16718C594C00028FA1B /* Square.m */; };
+		DAB4A1A918C594C10028FA1B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16918C594C00028FA1B /* User.m */; };
+		DAB4A1AA18C594C10028FA1B /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16B18C594C00028FA1B /* Users.m */; };
+		DAB4A1AB18C594C10028FA1B /* CursameAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A16E18C594C00028FA1B /* CursameAvatar.m */; };
+		DAB4A1AC18C594C10028FA1B /* CursameBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17018C594C00028FA1B /* CursameBaseClass.m */; };
+		DAB4A1AD18C594C10028FA1B /* CursameChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17218C594C00028FA1B /* CursameChannel.m */; };
+		DAB4A1AE18C594C10028FA1B /* CursameCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17418C594C00028FA1B /* CursameCompress.m */; };
+		DAB4A1AF18C594C10028FA1B /* CursameCourseIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17618C594C00028FA1B /* CursameCourseIndex.m */; };
+		DAB4A1B018C594C10028FA1B /* CursameCoverphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17818C594C00028FA1B /* CursameCoverphoto.m */; };
+		DAB4A1B118C594C10028FA1B /* CursameExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17A18C594C00028FA1B /* CursameExpanded.m */; };
+		DAB4A1B218C594C10028FA1B /* CursameHead.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17C18C594C10028FA1B /* CursameHead.m */; };
+		DAB4A1B318C594C10028FA1B /* CursameImageFront.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A17E18C594C10028FA1B /* CursameImageFront.m */; };
+		DAB4A1B418C594C10028FA1B /* CursameMini.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18118C594C10028FA1B /* CursameMini.m */; };
+		DAB4A1B518C594C10028FA1B /* CursameModern.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18318C594C10028FA1B /* CursameModern.m */; };
+		DAB4A1B618C594C10028FA1B /* CursameMosaic.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18518C594C10028FA1B /* CursameMosaic.m */; };
+		DAB4A1B718C594C10028FA1B /* CursameNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18718C594C10028FA1B /* CursameNetworks.m */; };
+		DAB4A1B818C594C10028FA1B /* CursameNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18918C594C10028FA1B /* CursameNotifications.m */; };
+		DAB4A1B918C594C10028FA1B /* CursameProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18B18C594C10028FA1B /* CursameProfile.m */; };
+		DAB4A1BA18C594C10028FA1B /* CursameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18D18C594C10028FA1B /* CursameResponse.m */; };
+		DAB4A1BB18C594C10028FA1B /* CursameRoles.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18F18C594C10028FA1B /* CursameRoles.m */; };
+		DAB4A1BC18C594C10028FA1B /* CursameSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A19118C594C10028FA1B /* CursameSquare.m */; };
+		DAB4A1BD18C594C10028FA1B /* CursameUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A19318C594C10028FA1B /* CursameUser.m */; };
 		DAF045F418B04E12008C58AF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF045F318B04E12008C58AF /* MBProgressHUD.m */; };
 		DAF6146B18A9A2060020DC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146A18A9A2060020DC23 /* Foundation.framework */; };
 		DAF6146D18A9A2060020DC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146C18A9A2060020DC23 /* CoreGraphics.framework */; };
@@ -50,6 +93,94 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0833E218C040FA00C9E9E5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		DA0833E318C040FA00C9E9E5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		DAB4A13D18C594C00028FA1B /* Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Avatar.h; sourceTree = "<group>"; };
+		DAB4A13E18C594C00028FA1B /* Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Avatar.m; sourceTree = "<group>"; };
+		DAB4A13F18C594C00028FA1B /* Comments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comments.h; sourceTree = "<group>"; };
+		DAB4A14018C594C00028FA1B /* Comments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comments.m; sourceTree = "<group>"; };
+		DAB4A14118C594C00028FA1B /* Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compress.h; sourceTree = "<group>"; };
+		DAB4A14218C594C00028FA1B /* Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compress.m; sourceTree = "<group>"; };
+		DAB4A14318C594C00028FA1B /* CourseIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseIndex.h; sourceTree = "<group>"; };
+		DAB4A14418C594C00028FA1B /* CourseIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseIndex.m; sourceTree = "<group>"; };
+		DAB4A14518C594C00028FA1B /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
+		DAB4A14618C594C00028FA1B /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
+		DAB4A14718C594C00028FA1B /* Coverphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coverphoto.h; sourceTree = "<group>"; };
+		DAB4A14818C594C00028FA1B /* Coverphoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coverphoto.m; sourceTree = "<group>"; };
+		DAB4A14918C594C00028FA1B /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		DAB4A14A18C594C00028FA1B /* Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expanded.h; sourceTree = "<group>"; };
+		DAB4A14B18C594C00028FA1B /* Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expanded.m; sourceTree = "<group>"; };
+		DAB4A14C18C594C00028FA1B /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		DAB4A14D18C594C00028FA1B /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		DAB4A14E18C594C00028FA1B /* Head.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Head.h; sourceTree = "<group>"; };
+		DAB4A14F18C594C00028FA1B /* Head.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Head.m; sourceTree = "<group>"; };
+		DAB4A15018C594C00028FA1B /* ImageFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFront.h; sourceTree = "<group>"; };
+		DAB4A15118C594C00028FA1B /* ImageFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFront.m; sourceTree = "<group>"; };
+		DAB4A15218C594C00028FA1B /* Likes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Likes.h; sourceTree = "<group>"; };
+		DAB4A15318C594C00028FA1B /* Likes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Likes.m; sourceTree = "<group>"; };
+		DAB4A15418C594C00028FA1B /* Logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logo.h; sourceTree = "<group>"; };
+		DAB4A15518C594C00028FA1B /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
+		DAB4A15618C594C00028FA1B /* Mini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mini.h; sourceTree = "<group>"; };
+		DAB4A15718C594C00028FA1B /* Mini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mini.m; sourceTree = "<group>"; };
+		DAB4A15818C594C00028FA1B /* Modern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modern.h; sourceTree = "<group>"; };
+		DAB4A15918C594C00028FA1B /* Modern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Modern.m; sourceTree = "<group>"; };
+		DAB4A15A18C594C00028FA1B /* Mosaic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mosaic.h; sourceTree = "<group>"; };
+		DAB4A15B18C594C00028FA1B /* Mosaic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mosaic.m; sourceTree = "<group>"; };
+		DAB4A15C18C594C00028FA1B /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		DAB4A15D18C594C00028FA1B /* Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
+		DAB4A15E18C594C00028FA1B /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		DAB4A15F18C594C00028FA1B /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		DAB4A16018C594C00028FA1B /* Publication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publication.h; sourceTree = "<group>"; };
+		DAB4A16118C594C00028FA1B /* Publication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publication.m; sourceTree = "<group>"; };
+		DAB4A16218C594C00028FA1B /* Publications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publications.h; sourceTree = "<group>"; };
+		DAB4A16318C594C00028FA1B /* Publications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publications.m; sourceTree = "<group>"; };
+		DAB4A16418C594C00028FA1B /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		DAB4A16518C594C00028FA1B /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		DAB4A16618C594C00028FA1B /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		DAB4A16718C594C00028FA1B /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
+		DAB4A16818C594C00028FA1B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DAB4A16918C594C00028FA1B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		DAB4A16A18C594C00028FA1B /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		DAB4A16B18C594C00028FA1B /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		DAB4A16D18C594C00028FA1B /* CursameAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameAvatar.h; sourceTree = "<group>"; };
+		DAB4A16E18C594C00028FA1B /* CursameAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameAvatar.m; sourceTree = "<group>"; };
+		DAB4A16F18C594C00028FA1B /* CursameBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameBaseClass.h; sourceTree = "<group>"; };
+		DAB4A17018C594C00028FA1B /* CursameBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameBaseClass.m; sourceTree = "<group>"; };
+		DAB4A17118C594C00028FA1B /* CursameChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameChannel.h; sourceTree = "<group>"; };
+		DAB4A17218C594C00028FA1B /* CursameChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameChannel.m; sourceTree = "<group>"; };
+		DAB4A17318C594C00028FA1B /* CursameCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameCompress.h; sourceTree = "<group>"; };
+		DAB4A17418C594C00028FA1B /* CursameCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameCompress.m; sourceTree = "<group>"; };
+		DAB4A17518C594C00028FA1B /* CursameCourseIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameCourseIndex.h; sourceTree = "<group>"; };
+		DAB4A17618C594C00028FA1B /* CursameCourseIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameCourseIndex.m; sourceTree = "<group>"; };
+		DAB4A17718C594C00028FA1B /* CursameCoverphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameCoverphoto.h; sourceTree = "<group>"; };
+		DAB4A17818C594C00028FA1B /* CursameCoverphoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameCoverphoto.m; sourceTree = "<group>"; };
+		DAB4A17918C594C00028FA1B /* CursameExpanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameExpanded.h; sourceTree = "<group>"; };
+		DAB4A17A18C594C00028FA1B /* CursameExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameExpanded.m; sourceTree = "<group>"; };
+		DAB4A17B18C594C00028FA1B /* CursameHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameHead.h; sourceTree = "<group>"; };
+		DAB4A17C18C594C10028FA1B /* CursameHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameHead.m; sourceTree = "<group>"; };
+		DAB4A17D18C594C10028FA1B /* CursameImageFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameImageFront.h; sourceTree = "<group>"; };
+		DAB4A17E18C594C10028FA1B /* CursameImageFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameImageFront.m; sourceTree = "<group>"; };
+		DAB4A17F18C594C10028FA1B /* CursameLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameLogo.h; sourceTree = "<group>"; };
+		DAB4A18018C594C10028FA1B /* CursameMini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameMini.h; sourceTree = "<group>"; };
+		DAB4A18118C594C10028FA1B /* CursameMini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameMini.m; sourceTree = "<group>"; };
+		DAB4A18218C594C10028FA1B /* CursameModern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameModern.h; sourceTree = "<group>"; };
+		DAB4A18318C594C10028FA1B /* CursameModern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameModern.m; sourceTree = "<group>"; };
+		DAB4A18418C594C10028FA1B /* CursameMosaic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameMosaic.h; sourceTree = "<group>"; };
+		DAB4A18518C594C10028FA1B /* CursameMosaic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameMosaic.m; sourceTree = "<group>"; };
+		DAB4A18618C594C10028FA1B /* CursameNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameNetworks.h; sourceTree = "<group>"; };
+		DAB4A18718C594C10028FA1B /* CursameNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameNetworks.m; sourceTree = "<group>"; };
+		DAB4A18818C594C10028FA1B /* CursameNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameNotifications.h; sourceTree = "<group>"; };
+		DAB4A18918C594C10028FA1B /* CursameNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameNotifications.m; sourceTree = "<group>"; };
+		DAB4A18A18C594C10028FA1B /* CursameProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameProfile.h; sourceTree = "<group>"; };
+		DAB4A18B18C594C10028FA1B /* CursameProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameProfile.m; sourceTree = "<group>"; };
+		DAB4A18C18C594C10028FA1B /* CursameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameResponse.h; sourceTree = "<group>"; };
+		DAB4A18D18C594C10028FA1B /* CursameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameResponse.m; sourceTree = "<group>"; };
+		DAB4A18E18C594C10028FA1B /* CursameRoles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameRoles.h; sourceTree = "<group>"; };
+		DAB4A18F18C594C10028FA1B /* CursameRoles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameRoles.m; sourceTree = "<group>"; };
+		DAB4A19018C594C10028FA1B /* CursameSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameSquare.h; sourceTree = "<group>"; };
+		DAB4A19118C594C10028FA1B /* CursameSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameSquare.m; sourceTree = "<group>"; };
+		DAB4A19218C594C10028FA1B /* CursameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameUser.h; sourceTree = "<group>"; };
+		DAB4A19318C594C10028FA1B /* CursameUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameUser.m; sourceTree = "<group>"; };
 		DAF045EF18AC396B008C58AF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		DAF045F218B04E12008C58AF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DAF045F318B04E12008C58AF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -126,9 +257,119 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0833E118C040EE00C9E9E5 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				DA0833E218C040FA00C9E9E5 /* JSONKit.h */,
+				DA0833E318C040FA00C9E9E5 /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		DAB4A13C18C594C00028FA1B /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DAB4A13D18C594C00028FA1B /* Avatar.h */,
+				DAB4A13E18C594C00028FA1B /* Avatar.m */,
+				DAB4A13F18C594C00028FA1B /* Comments.h */,
+				DAB4A14018C594C00028FA1B /* Comments.m */,
+				DAB4A14118C594C00028FA1B /* Compress.h */,
+				DAB4A14218C594C00028FA1B /* Compress.m */,
+				DAB4A14318C594C00028FA1B /* CourseIndex.h */,
+				DAB4A14418C594C00028FA1B /* CourseIndex.m */,
+				DAB4A14518C594C00028FA1B /* Courses.h */,
+				DAB4A14618C594C00028FA1B /* Courses.m */,
+				DAB4A14718C594C00028FA1B /* Coverphoto.h */,
+				DAB4A14818C594C00028FA1B /* Coverphoto.m */,
+				DAB4A14918C594C00028FA1B /* DataModels.h */,
+				DAB4A14A18C594C00028FA1B /* Expanded.h */,
+				DAB4A14B18C594C00028FA1B /* Expanded.m */,
+				DAB4A14C18C594C00028FA1B /* Feed.h */,
+				DAB4A14D18C594C00028FA1B /* Feed.m */,
+				DAB4A14E18C594C00028FA1B /* Head.h */,
+				DAB4A14F18C594C00028FA1B /* Head.m */,
+				DAB4A15018C594C00028FA1B /* ImageFront.h */,
+				DAB4A15118C594C00028FA1B /* ImageFront.m */,
+				DAB4A15218C594C00028FA1B /* Likes.h */,
+				DAB4A15318C594C00028FA1B /* Likes.m */,
+				DAB4A15418C594C00028FA1B /* Logo.h */,
+				DAB4A15518C594C00028FA1B /* Logo.m */,
+				DAB4A15618C594C00028FA1B /* Mini.h */,
+				DAB4A15718C594C00028FA1B /* Mini.m */,
+				DAB4A15818C594C00028FA1B /* Modern.h */,
+				DAB4A15918C594C00028FA1B /* Modern.m */,
+				DAB4A15A18C594C00028FA1B /* Mosaic.h */,
+				DAB4A15B18C594C00028FA1B /* Mosaic.m */,
+				DAB4A15C18C594C00028FA1B /* Network.h */,
+				DAB4A15D18C594C00028FA1B /* Network.m */,
+				DAB4A15E18C594C00028FA1B /* Profile.h */,
+				DAB4A15F18C594C00028FA1B /* Profile.m */,
+				DAB4A16018C594C00028FA1B /* Publication.h */,
+				DAB4A16118C594C00028FA1B /* Publication.m */,
+				DAB4A16218C594C00028FA1B /* Publications.h */,
+				DAB4A16318C594C00028FA1B /* Publications.m */,
+				DAB4A16418C594C00028FA1B /* Response.h */,
+				DAB4A16518C594C00028FA1B /* Response.m */,
+				DAB4A16618C594C00028FA1B /* Square.h */,
+				DAB4A16718C594C00028FA1B /* Square.m */,
+				DAB4A16818C594C00028FA1B /* User.h */,
+				DAB4A16918C594C00028FA1B /* User.m */,
+				DAB4A16A18C594C00028FA1B /* Users.h */,
+				DAB4A16B18C594C00028FA1B /* Users.m */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		DAB4A16C18C594C00028FA1B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DAB4A16D18C594C00028FA1B /* CursameAvatar.h */,
+				DAB4A16E18C594C00028FA1B /* CursameAvatar.m */,
+				DAB4A16F18C594C00028FA1B /* CursameBaseClass.h */,
+				DAB4A17018C594C00028FA1B /* CursameBaseClass.m */,
+				DAB4A17118C594C00028FA1B /* CursameChannel.h */,
+				DAB4A17218C594C00028FA1B /* CursameChannel.m */,
+				DAB4A17318C594C00028FA1B /* CursameCompress.h */,
+				DAB4A17418C594C00028FA1B /* CursameCompress.m */,
+				DAB4A17518C594C00028FA1B /* CursameCourseIndex.h */,
+				DAB4A17618C594C00028FA1B /* CursameCourseIndex.m */,
+				DAB4A17718C594C00028FA1B /* CursameCoverphoto.h */,
+				DAB4A17818C594C00028FA1B /* CursameCoverphoto.m */,
+				DAB4A17918C594C00028FA1B /* CursameExpanded.h */,
+				DAB4A17A18C594C00028FA1B /* CursameExpanded.m */,
+				DAB4A17B18C594C00028FA1B /* CursameHead.h */,
+				DAB4A17C18C594C10028FA1B /* CursameHead.m */,
+				DAB4A17D18C594C10028FA1B /* CursameImageFront.h */,
+				DAB4A17E18C594C10028FA1B /* CursameImageFront.m */,
+				DAB4A17F18C594C10028FA1B /* CursameLogo.h */,
+				DAB4A18018C594C10028FA1B /* CursameMini.h */,
+				DAB4A18118C594C10028FA1B /* CursameMini.m */,
+				DAB4A18218C594C10028FA1B /* CursameModern.h */,
+				DAB4A18318C594C10028FA1B /* CursameModern.m */,
+				DAB4A18418C594C10028FA1B /* CursameMosaic.h */,
+				DAB4A18518C594C10028FA1B /* CursameMosaic.m */,
+				DAB4A18618C594C10028FA1B /* CursameNetworks.h */,
+				DAB4A18718C594C10028FA1B /* CursameNetworks.m */,
+				DAB4A18818C594C10028FA1B /* CursameNotifications.h */,
+				DAB4A18918C594C10028FA1B /* CursameNotifications.m */,
+				DAB4A18A18C594C10028FA1B /* CursameProfile.h */,
+				DAB4A18B18C594C10028FA1B /* CursameProfile.m */,
+				DAB4A18C18C594C10028FA1B /* CursameResponse.h */,
+				DAB4A18D18C594C10028FA1B /* CursameResponse.m */,
+				DAB4A18E18C594C10028FA1B /* CursameRoles.h */,
+				DAB4A18F18C594C10028FA1B /* CursameRoles.m */,
+				DAB4A19018C594C10028FA1B /* CursameSquare.h */,
+				DAB4A19118C594C10028FA1B /* CursameSquare.m */,
+				DAB4A19218C594C10028FA1B /* CursameUser.h */,
+				DAB4A19318C594C10028FA1B /* CursameUser.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		DAF045F018B04DE2008C58AF /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				DA0833E118C040EE00C9E9E5 /* JSONKit */,
 				DAF045F518B04E1D008C58AF /* MBProgressHUD */,
 				DAF045F118B04DF4008C58AF /* Slide Navigation */,
 			);
@@ -155,6 +396,8 @@
 		DAF0463018B170B6008C58AF /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				DAB4A13C18C594C00028FA1B /* Feed */,
+				DAB4A16C18C594C00028FA1B /* Home */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -394,21 +637,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB4A1A418C594C10028FA1B /* Profile.m in Sources */,
+				DAB4A1B518C594C10028FA1B /* CursameModern.m in Sources */,
+				DAB4A1A118C594C10028FA1B /* Modern.m in Sources */,
 				DAF614C218AA02050020DC23 /* FriendsViewController.m in Sources */,
+				DAB4A19718C594C10028FA1B /* CourseIndex.m in Sources */,
+				DAB4A1B718C594C10028FA1B /* CursameNetworks.m in Sources */,
+				DAB4A1B918C594C10028FA1B /* CursameProfile.m in Sources */,
 				DAF6147B18A9A2060020DC23 /* AppDelegate.m in Sources */,
+				DAB4A1BA18C594C10028FA1B /* CursameResponse.m in Sources */,
 				DAF614DD18AA02140020DC23 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				DAB4A1BC18C594C10028FA1B /* CursameSquare.m in Sources */,
 				DAF614D918AA02140020DC23 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
+				DAB4A19C18C594C10028FA1B /* Head.m in Sources */,
+				DA0833E418C040FA00C9E9E5 /* JSONKit.m in Sources */,
+				DAB4A19D18C594C10028FA1B /* ImageFront.m in Sources */,
+				DAB4A1BB18C594C10028FA1B /* CursameRoles.m in Sources */,
+				DAB4A1A518C594C10028FA1B /* Publication.m in Sources */,
+				DAB4A19918C594C10028FA1B /* Coverphoto.m in Sources */,
+				DAB4A1AA18C594C10028FA1B /* Users.m in Sources */,
 				DAF614E518AAD7EC0020DC23 /* LoginViewController.m in Sources */,
 				DAF6147718A9A2060020DC23 /* main.m in Sources */,
+				DAB4A19518C594C10028FA1B /* Comments.m in Sources */,
+				DAB4A1AF18C594C10028FA1B /* CursameCourseIndex.m in Sources */,
 				DAF614DA18AA02140020DC23 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				DAB4A1A318C594C10028FA1B /* Network.m in Sources */,
+				DAB4A19A18C594C10028FA1B /* Expanded.m in Sources */,
+				DAB4A1A018C594C10028FA1B /* Mini.m in Sources */,
+				DAB4A1AE18C594C10028FA1B /* CursameCompress.m in Sources */,
 				DAF045F418B04E12008C58AF /* MBProgressHUD.m in Sources */,
+				DAB4A1A218C594C10028FA1B /* Mosaic.m in Sources */,
+				DAB4A19E18C594C10028FA1B /* Likes.m in Sources */,
+				DAB4A1BD18C594C10028FA1B /* CursameUser.m in Sources */,
+				DAB4A1B818C594C10028FA1B /* CursameNotifications.m in Sources */,
 				DAF614DB18AA02140020DC23 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				DAF614DC18AA02140020DC23 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				DAB4A1B118C594C10028FA1B /* CursameExpanded.m in Sources */,
+				DAB4A1AB18C594C10028FA1B /* CursameAvatar.m in Sources */,
+				DAB4A1A718C594C10028FA1B /* Response.m in Sources */,
+				DAB4A19818C594C10028FA1B /* Courses.m in Sources */,
+				DAB4A1AD18C594C10028FA1B /* CursameChannel.m in Sources */,
+				DAB4A19618C594C10028FA1B /* Compress.m in Sources */,
+				DAB4A1B218C594C10028FA1B /* CursameHead.m in Sources */,
 				DAF614E018AA02140020DC23 /* SlideNavigationController.m in Sources */,
+				DAB4A1A618C594C10028FA1B /* Publications.m in Sources */,
 				DAF614C518AA02050020DC23 /* ProfileDetailViewController.m in Sources */,
+				DAB4A19F18C594C10028FA1B /* Logo.m in Sources */,
 				DAF614C618AA02050020DC23 /* ProfileViewController.m in Sources */,
 				DAF614C318AA02050020DC23 /* HomeViewController.m in Sources */,
+				DAB4A19B18C594C10028FA1B /* Feed.m in Sources */,
+				DAB4A1A918C594C10028FA1B /* User.m in Sources */,
+				DAB4A1B318C594C10028FA1B /* CursameImageFront.m in Sources */,
+				DAB4A1B618C594C10028FA1B /* CursameMosaic.m in Sources */,
 				DAF614C418AA02050020DC23 /* MenuViewController.m in Sources */,
+				DAB4A1AC18C594C10028FA1B /* CursameBaseClass.m in Sources */,
+				DAB4A1B418C594C10028FA1B /* CursameMini.m in Sources */,
+				DAB4A1B018C594C10028FA1B /* CursameCoverphoto.m in Sources */,
+				DAB4A19418C594C10028FA1B /* Avatar.m in Sources */,
+				DAB4A1A818C594C10028FA1B /* Square.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
