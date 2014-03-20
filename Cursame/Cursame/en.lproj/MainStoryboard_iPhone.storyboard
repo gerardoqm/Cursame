@@ -92,6 +92,22 @@
             </objects>
             <point key="canvasLocation" x="11" y="49"/>
         </scene>
+        <!--Event View Controller - Eventos-->
+        <scene sceneID="toy-JG-TQe">
+            <objects>
+                <viewController storyboardIdentifier="EventViewController" id="S2Z-f0-rkH" customClass="EventViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ra8-oM-q6F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Eventos" id="ioI-gN-EgO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcR-fG-WLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="1033"/>
+        </scene>
         <!--Home View Controller - Inicio-->
         <scene sceneID="7Hl-22-JcN">
             <objects>
@@ -333,7 +349,7 @@
             </objects>
             <point key="canvasLocation" x="517" y="55"/>
         </scene>
-        <!--Profile View Controller - Profile-->
+        <!--Profile View Controller - Perfil-->
         <scene sceneID="xeE-nX-pb6">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="nrg-5w-bbF" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -487,7 +503,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="cIB-4y-aS6"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="cIB-4y-aS6"/>
                     <connections>
                         <outlet property="backgroundImage" destination="kHK-sS-GNG" id="M4D-U3-UZx"/>
                         <outlet property="bioLabel" destination="ySC-OX-3Hk" id="kit-ox-h8z"/>
@@ -585,20 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoB-W7-tIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="437"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Boq-Nm-SSX">
-            <objects>
-                <viewController id="JyV-oU-xiA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fEf-CR-S5j">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-fu-vWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="1537" y="443"/>
         </scene>
     </scenes>
     <resources>

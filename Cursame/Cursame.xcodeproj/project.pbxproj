@@ -50,6 +50,14 @@
 		DAB4A1BB18C594C10028FA1B /* CursameRoles.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A18F18C594C10028FA1B /* CursameRoles.m */; };
 		DAB4A1BC18C594C10028FA1B /* CursameSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A19118C594C10028FA1B /* CursameSquare.m */; };
 		DAB4A1BD18C594C10028FA1B /* CursameUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A19318C594C10028FA1B /* CursameUser.m */; };
+		DAD113FC18DA9E4500E703F7 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD113FB18DA9E4500E703F7 /* EventViewController.m */; };
+		DAD1140718DA9EA600E703F7 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD113FE18DA9EA600E703F7 /* NSDate+convenience.m */; };
+		DAD1140818DA9EA600E703F7 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1140018DA9EA600E703F7 /* NSMutableArray+convenience.m */; };
+		DAD1140918DA9EA600E703F7 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1140218DA9EA600E703F7 /* UIColor+expanded.m */; };
+		DAD1140A18DA9EA700E703F7 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1140418DA9EA600E703F7 /* UIView+convenience.m */; };
+		DAD1140B18DA9EA700E703F7 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1140618DA9EA600E703F7 /* VRGCalendarView.m */; };
+		DAD1141B18DAA02D00E703F7 /* CursameEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1141718DAA02D00E703F7 /* CursameEvents.m */; };
+		DAD1141C18DAA02D00E703F7 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1141A18DAA02D00E703F7 /* Results.m */; };
 		DAF045F418B04E12008C58AF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF045F318B04E12008C58AF /* MBProgressHUD.m */; };
 		DAF6146B18A9A2060020DC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146A18A9A2060020DC23 /* Foundation.framework */; };
 		DAF6146D18A9A2060020DC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146C18A9A2060020DC23 /* CoreGraphics.framework */; };
@@ -181,6 +189,23 @@
 		DAB4A19118C594C10028FA1B /* CursameSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameSquare.m; sourceTree = "<group>"; };
 		DAB4A19218C594C10028FA1B /* CursameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameUser.h; sourceTree = "<group>"; };
 		DAB4A19318C594C10028FA1B /* CursameUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameUser.m; sourceTree = "<group>"; };
+		DAD113FA18DA9E4500E703F7 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		DAD113FB18DA9E4500E703F7 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		DAD113FD18DA9EA600E703F7 /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		DAD113FE18DA9EA600E703F7 /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		DAD113FF18DA9EA600E703F7 /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		DAD1140018DA9EA600E703F7 /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		DAD1140118DA9EA600E703F7 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		DAD1140218DA9EA600E703F7 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		DAD1140318DA9EA600E703F7 /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		DAD1140418DA9EA600E703F7 /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		DAD1140518DA9EA600E703F7 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
+		DAD1140618DA9EA600E703F7 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		DAD1141618DAA02D00E703F7 /* CursameEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursameEvents.h; sourceTree = "<group>"; };
+		DAD1141718DAA02D00E703F7 /* CursameEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursameEvents.m; sourceTree = "<group>"; };
+		DAD1141818DAA02D00E703F7 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		DAD1141918DAA02D00E703F7 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
+		DAD1141A18DAA02D00E703F7 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
 		DAF045EF18AC396B008C58AF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		DAF045F218B04E12008C58AF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DAF045F318B04E12008C58AF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -366,9 +391,39 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DAD1140C18DA9EAD00E703F7 /* Vurig Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				DAD113FD18DA9EA600E703F7 /* NSDate+convenience.h */,
+				DAD113FE18DA9EA600E703F7 /* NSDate+convenience.m */,
+				DAD113FF18DA9EA600E703F7 /* NSMutableArray+convenience.h */,
+				DAD1140018DA9EA600E703F7 /* NSMutableArray+convenience.m */,
+				DAD1140118DA9EA600E703F7 /* UIColor+expanded.h */,
+				DAD1140218DA9EA600E703F7 /* UIColor+expanded.m */,
+				DAD1140318DA9EA600E703F7 /* UIView+convenience.h */,
+				DAD1140418DA9EA600E703F7 /* UIView+convenience.m */,
+				DAD1140518DA9EA600E703F7 /* VRGCalendarView.h */,
+				DAD1140618DA9EA600E703F7 /* VRGCalendarView.m */,
+			);
+			name = "Vurig Calendar";
+			sourceTree = "<group>";
+		};
+		DAD1141518DAA02D00E703F7 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				DAD1141618DAA02D00E703F7 /* CursameEvents.h */,
+				DAD1141718DAA02D00E703F7 /* CursameEvents.m */,
+				DAD1141818DAA02D00E703F7 /* DataModels.h */,
+				DAD1141918DAA02D00E703F7 /* Results.h */,
+				DAD1141A18DAA02D00E703F7 /* Results.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		DAF045F018B04DE2008C58AF /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				DAD1140C18DA9EAD00E703F7 /* Vurig Calendar */,
 				DA0833E118C040EE00C9E9E5 /* JSONKit */,
 				DAF045F518B04E1D008C58AF /* MBProgressHUD */,
 				DAF045F118B04DF4008C58AF /* Slide Navigation */,
@@ -396,6 +451,7 @@
 		DAF0463018B170B6008C58AF /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				DAD1141518DAA02D00E703F7 /* Events */,
 				DAB4A13C18C594C00028FA1B /* Feed */,
 				DAB4A16C18C594C00028FA1B /* Home */,
 			);
@@ -495,6 +551,8 @@
 				DAF614C118AA02050020DC23 /* ProfileViewController.m */,
 				DAF614E318AAD7EC0020DC23 /* LoginViewController.h */,
 				DAF614E418AAD7EC0020DC23 /* LoginViewController.m */,
+				DAD113FA18DA9E4500E703F7 /* EventViewController.h */,
+				DAD113FB18DA9E4500E703F7 /* EventViewController.m */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -639,6 +697,7 @@
 			files = (
 				DAB4A1A418C594C10028FA1B /* Profile.m in Sources */,
 				DAB4A1B518C594C10028FA1B /* CursameModern.m in Sources */,
+				DAD113FC18DA9E4500E703F7 /* EventViewController.m in Sources */,
 				DAB4A1A118C594C10028FA1B /* Modern.m in Sources */,
 				DAF614C218AA02050020DC23 /* FriendsViewController.m in Sources */,
 				DAB4A19718C594C10028FA1B /* CourseIndex.m in Sources */,
@@ -652,8 +711,10 @@
 				DAB4A19C18C594C10028FA1B /* Head.m in Sources */,
 				DA0833E418C040FA00C9E9E5 /* JSONKit.m in Sources */,
 				DAB4A19D18C594C10028FA1B /* ImageFront.m in Sources */,
+				DAD1140B18DA9EA700E703F7 /* VRGCalendarView.m in Sources */,
 				DAB4A1BB18C594C10028FA1B /* CursameRoles.m in Sources */,
 				DAB4A1A518C594C10028FA1B /* Publication.m in Sources */,
+				DAD1141B18DAA02D00E703F7 /* CursameEvents.m in Sources */,
 				DAB4A19918C594C10028FA1B /* Coverphoto.m in Sources */,
 				DAB4A1AA18C594C10028FA1B /* Users.m in Sources */,
 				DAF614E518AAD7EC0020DC23 /* LoginViewController.m in Sources */,
@@ -674,13 +735,17 @@
 				DAF614DC18AA02140020DC23 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				DAB4A1B118C594C10028FA1B /* CursameExpanded.m in Sources */,
 				DAB4A1AB18C594C10028FA1B /* CursameAvatar.m in Sources */,
+				DAD1140718DA9EA600E703F7 /* NSDate+convenience.m in Sources */,
 				DAB4A1A718C594C10028FA1B /* Response.m in Sources */,
+				DAD1140A18DA9EA700E703F7 /* UIView+convenience.m in Sources */,
+				DAD1140818DA9EA600E703F7 /* NSMutableArray+convenience.m in Sources */,
 				DAB4A19818C594C10028FA1B /* Courses.m in Sources */,
 				DAB4A1AD18C594C10028FA1B /* CursameChannel.m in Sources */,
 				DAB4A19618C594C10028FA1B /* Compress.m in Sources */,
 				DAB4A1B218C594C10028FA1B /* CursameHead.m in Sources */,
 				DAF614E018AA02140020DC23 /* SlideNavigationController.m in Sources */,
 				DAB4A1A618C594C10028FA1B /* Publications.m in Sources */,
+				DAD1141C18DAA02D00E703F7 /* Results.m in Sources */,
 				DAF614C518AA02050020DC23 /* ProfileDetailViewController.m in Sources */,
 				DAB4A19F18C594C10028FA1B /* Logo.m in Sources */,
 				DAF614C618AA02050020DC23 /* ProfileViewController.m in Sources */,
@@ -690,6 +755,7 @@
 				DAB4A1B318C594C10028FA1B /* CursameImageFront.m in Sources */,
 				DAB4A1B618C594C10028FA1B /* CursameMosaic.m in Sources */,
 				DAF614C418AA02050020DC23 /* MenuViewController.m in Sources */,
+				DAD1140918DA9EA600E703F7 /* UIColor+expanded.m in Sources */,
 				DAB4A1AC18C594C10028FA1B /* CursameBaseClass.m in Sources */,
 				DAB4A1B418C594C10028FA1B /* CursameMini.m in Sources */,
 				DAB4A1B018C594C10028FA1B /* CursameCoverphoto.m in Sources */,

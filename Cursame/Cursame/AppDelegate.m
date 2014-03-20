@@ -41,6 +41,7 @@
 
 @synthesize cursameResponse=_cursameResponse;
 @synthesize publicationsFeed=_publicationsFeed;
+@synthesize eventsFeed=_eventsFeed;
 
 
 
@@ -48,6 +49,8 @@
 {
     cursameResponse =[[CursameResponse alloc]init];
     publicationsFeed =[[NSMutableArray alloc]init];
+    eventsFeed =[[NSMutableArray alloc]init];
+
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
 															 bundle: nil];
 	

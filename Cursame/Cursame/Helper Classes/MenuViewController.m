@@ -27,12 +27,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 2;
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return (section == 0) ? 4 : 6;
+	return 6;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -45,56 +45,36 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
     cell.selectedBackgroundView = [[UIView alloc] init];
     cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:31/255 green:31/255 blue:31/255 alpha:1.0];
-	if (indexPath.section == 0)
-	{
-		switch (indexPath.row)
-		{
-			case 0:
-				cell.textLabel.text = @"Home";
-				break;
-				
-			case 1:
-				cell.textLabel.text = @"Profile";
-				break;
-				
-			case 2:
-				cell.textLabel.text = @"Friends";
-				break;
-				
-			case 3:
-				cell.textLabel.text = @"Sign Out";
-				break;
-		}
-	}
-	else
-	{
-		switch (indexPath.row)
-		{
-			case 0:
-				cell.textLabel.text = @"No Animation";
-				break;
-				
-			case 1:
-				cell.textLabel.text = @"Slide Animation";
-				break;
-				
-			case 2:
-				cell.textLabel.text = @"Fade Animation";
-				break;
-				
-			case 3:
-				cell.textLabel.text = @"Slide And Fade Animation";
-				break;
-				
-			case 4:
-				cell.textLabel.text = @"Scale Animation";
-				break;
-				
-			case 5:
-				cell.textLabel.text = @"Scale And Fade Animation";
-				break;
-		}
-	}
+    switch (indexPath.row)
+    {
+        case 0:
+            cell.textLabel.text = @"Perfil";
+            break;
+            
+        case 1:
+            cell.textLabel.text = @"Inicio";
+            break;
+            
+        case 2:
+            cell.textLabel.text = @"Asignaturas";
+            break;
+            
+        case 3:
+            cell.textLabel.text = @"Eventos";
+            break;
+            
+        case 4:
+            cell.textLabel.text = @"Comunidad";
+            break;
+            
+        case 5:
+            cell.textLabel.text = @"Chat";
+            break;
+            
+        case 6:
+            cell.textLabel.text = @"Cerrar Sesión";
+            break;
+    }
 	
 	return cell;
 }
@@ -114,11 +94,11 @@
 		switch (indexPath.row)
 		{
 			case 0:
-				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"HomeViewController"];
+				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ProfileViewController"];
 				break;
 				
 			case 1:
-				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ProfileViewController"];
+				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"HomeViewController"];
 				break;
 				
 			case 2:
@@ -126,6 +106,9 @@
 				break;
 				
 			case 3:
+				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"EventViewController"];
+				break;
+			case 6:
 				[[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
 				return;
 				break;
