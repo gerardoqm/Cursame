@@ -30,9 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    appDelegate = [[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view.
-
+    
+    self.appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
 #pragma mark -
 #pragma mark Bypass invalid server certificate for development
 #if( DEBUG==1 )
@@ -40,8 +40,35 @@
     password.text = @"123456";
 #endif
 
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"vertical" ofType:@"mp4"]];
+
+    _mPlayer = [[AVPlayer alloc] init];
+    //mPlayer = [mPlayer initWithURL:[NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"]];
+    _mPlayer = [_mPlayer initWithURL:url];
+    AVPlayerLayer * playerLayer = [AVPlayerLayer playerLayerWithPlayer:_mPlayer];
+    [[[self view] layer] insertSublayer:playerLayer atIndex:0];
+    [playerLayer setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    [_mPlayer play];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerItemDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:[_mPlayer currentItem]];
+
+    NSLog(@"Playing video at: %@", url);
+    
+    
+
 }
 
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification
+{
+    //Keeps looping the Idle video until another one is selected
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
+    [_mPlayer play];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -67,10 +94,9 @@
     // The hud will dispable all input on the window
 
 	
-	[[SlideNavigationController sharedInstance] HUD].labelText = @"Iniciando sesión";
+	[self.appDelegate showGlobalProgressHUDWithTitle: @"Iniciando sesión"];
 
 	
-	[[[SlideNavigationController sharedInstance] HUD] show:YES ];
 
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
@@ -103,15 +129,15 @@
              NSDictionary *JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
              NSDictionary *JSONResponse = [JSONData objectForKey:@"response"];
              
-             appDelegate.cursameResponse = [[CursameResponse alloc] initWithDictionary:JSONResponse];
-
-             //appDelegate.cursameResponse = [appDelegate.cursameResponse initWithDictionary:JSONResponse];
-             //appDelegate.cursameResponse.user = [ appDelegate.cursameResponse.user init initWithDictionary:appDelegate.cursameResponse.]
+             //self.appDelegate.cursameResponse = [[CursameResponse alloc] initWithDictionary:JSONResponse];
+             self.appDelegate.mainFeed =JSONData;
+             //self.appDelegate.cursameResponse = [self.appDelegate.cursameResponse initWithDictionary:JSONResponse];
+             //self.appDelegate.cursameResponse.user = [ self.appDelegate.cursameResponse.user init initWithDictionary:self.appDelegate.cursameResponse.]
 
              NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
              
              // saving an NSString
-             [prefs setValue:[NSString stringWithString:appDelegate.cursameResponse.token] forKey:@"token"];
+             [prefs setValue:[NSString stringWithString:[[self.appDelegate	.mainFeed objectForKey:@"response"] objectForKey:@"token"]] forKey:@"token"];
              [prefs synchronize];
              
 
@@ -122,22 +148,22 @@
              
              [[SlideNavigationController sharedInstance] switchToViewController:homeVC withCompletion:nil];
              
-             [[SlideNavigationController sharedInstance] HUD].mode = MBProgressHUDModeText;
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"Bienvenido";
-             [[[SlideNavigationController sharedInstance] HUD] hide:YES afterDelay:1.5];
-
+             [self.appDelegate showGlobalProgressHUDWithTitle: @"Bienvenido"];
+             [self.appDelegate dismissGlobalHUDWithDelay:1.5f];
 
          }
          else if ([data length] == 0 && error == nil)
          {
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"No se ha podido iniciar sesión, intenta de nuevo.";
+             [self.appDelegate showGlobalProgressHUDWithTitle: @"No se ha podido iniciar sesión, intenta de nuevo."];
+             [self.appDelegate dismissGlobalHUDWithDelay:1.5f];
+
 
              NSLog(@"Nothing was downloaded.");
          }
          else if (error != nil){
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"Hubo un error en la comunicación, intenta de nuevo.";
+             [self.appDelegate showGlobalProgressHUDWithTitle: @"Hubo un error en la comunicación, intenta de nuevo."];
+             [self.appDelegate dismissGlobalHUDWithDelay:1.5f];
+
 
              NSLog(@"Error = %@", error);
          }

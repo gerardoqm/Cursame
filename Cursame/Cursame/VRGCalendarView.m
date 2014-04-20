@@ -77,7 +77,7 @@
     
     [self updateSize];
     [self setNeedsDisplay];
-    [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:NO];
+    [delegate calendarView:self switchedToMonth:currentMonth targetHeight:self.calendarHeight animated:NO];
 }
 
 #pragma mark - Next & Previous
@@ -99,7 +99,7 @@
     
     //New month
     self.currentMonth = [currentMonth offsetMonth:1];
-    if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight: animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];
+    if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight: animated:)]) [delegate calendarView:self switchedToMonth:currentMonth targetHeight:self.calendarHeight animated:YES];
     prepAnimationNextMonth=NO;
     [self setNeedsDisplay];
     
@@ -158,7 +158,7 @@
     
     //Prepare next screen
     self.currentMonth = [currentMonth offsetMonth:-1];
-    if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight:animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];
+    if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight:animated:)]) [delegate calendarView:self switchedToMonth:currentMonth targetHeight:self.calendarHeight animated:YES];
     prepAnimationPreviousMonth=NO;
     [self setNeedsDisplay];
     UIImage *imagePreviousMonth = [self drawCurrentState];
@@ -260,7 +260,7 @@
         int currentMonthIndex = [self.currentMonth month];
         int todayMonth = [[NSDate date] month];
         [self reset];
-        if ((todayMonth!=currentMonthIndex) && [delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight:animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:NO];
+        if ((todayMonth!=currentMonthIndex) && [delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight:animated:)]) [delegate calendarView:self switchedToMonth:currentMonth targetHeight:self.calendarHeight animated:NO];
     }
 }
 

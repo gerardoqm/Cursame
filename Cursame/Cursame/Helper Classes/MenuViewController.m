@@ -32,7 +32,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 6;
+	return 11;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -44,7 +44,7 @@
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
     cell.selectedBackgroundView = [[UIView alloc] init];
-    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:31/255 green:31/255 blue:31/255 alpha:1.0];
+    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.064 green:0.349 blue:0.745 alpha:1.000];
     switch (indexPath.row)
     {
         case 0:
@@ -53,27 +53,46 @@
             
         case 1:
             cell.textLabel.text = @"Inicio";
+            cell.imageView.image = [UIImage imageNamed:@"MenuInicio"];
+
             break;
             
         case 2:
-            cell.textLabel.text = @"Asignaturas";
+            cell.textLabel.text = @"Tareas";
             break;
             
         case 3:
-            cell.textLabel.text = @"Eventos";
+            cell.textLabel.text = @"Cuestionarios";
             break;
             
         case 4:
-            cell.textLabel.text = @"Comunidad";
+            cell.textLabel.text = @"Discusiones";
             break;
             
         case 5:
-            cell.textLabel.text = @"Chat";
+            cell.textLabel.text = @"Cursos";
             break;
             
         case 6:
-            cell.textLabel.text = @"Cerrar Sesión";
+            cell.textLabel.text = @"Calificaciones";
             break;
+            
+        case 7:
+            cell.textLabel.text = @"Calendario";
+            break;
+            
+        case 8:
+            cell.textLabel.text = @"Comunidad";
+            break;
+            
+        case 9:
+            cell.textLabel.text = @"Chat";
+            break;
+            
+        case 10:
+            cell.textLabel.text = @"Cerrar sesión";
+            break;
+            
     }
 	
 	return cell;
@@ -105,10 +124,10 @@
 				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"FriendsViewController"];
 				break;
 				
-			case 3:
+			case 7:
 				vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"EventViewController"];
 				break;
-			case 6:
+			case 10:
 				[[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
 				return;
 				break;

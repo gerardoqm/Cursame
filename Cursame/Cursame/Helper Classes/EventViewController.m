@@ -30,41 +30,41 @@
     [super viewDidLoad];
 	
     // Do any additional setup after loading the view.
-    appDelegate = [[UIApplication sharedApplication] delegate];
+    self.appDelegate = [[UIApplication sharedApplication] delegate];
 
     
     self.navigationController.title = @"Eventos";
     
-    calendar = [[VRGCalendarView alloc] init];
-    calendar.delegate=self;
-    [self.view addSubview:calendar];
-
+    self.calendar = [[VRGCalendarView alloc] init];
+    self.calendar.delegate=self;
+    [self.view addSubview:self.calendar];
+    
+    
 }
 
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    [self getEvents];
+    [self getEventsWithDate:[NSDate date]];
     
 }
 
--(void)getEvents
+-(void)getEventsWithDate:(NSDate *)theDate
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     NSString *token = [prefs stringForKey:@"token"];
     
     
-	[[SlideNavigationController sharedInstance] HUD].labelText = @"Cargando eventos";
-	
-	[[[SlideNavigationController sharedInstance] HUD] show:YES ];
+	[self.appDelegate showGlobalProgressHUDWithTitle: @"Cargando eventos..."];
+    
     
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM"];
-    NSString *dateString = [dateFormat stringFromDate:today];
+    NSString *dateString = [dateFormat stringFromDate:theDate];
     NSLog(@"date: %@", dateString);
-
+    
     
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
@@ -94,36 +94,59 @@
              
              //TODO: Interpretar respuesta
              NSDictionary *JSONData       = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
-             appDelegate.eventsFeed = [JSONData objectForKey:@"results"];
+             self.appDelegate.eventsFeed = [JSONData objectForKey:@"results"];
+             
+             [self.appDelegate dismissGlobalHUDWithDelay:1.0f];
+             
+             NSMutableArray *dates = [[NSMutableArray alloc] init];
              
              
-             [[[SlideNavigationController sharedInstance] HUD] hide:YES];
+             for (int i=0; i<[self.appDelegate.eventsFeed count]; i++) {
+                 NSString *dateString = [[self.appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"start"];
+                 
+                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                 // this is imporant - we set our input date format to match our input string
+                 // if format doesn't match you'll get nil from your string, so be careful
+                 [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss ZZZ"];
+                 [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+                 
+                 NSDate *dateFromString = [[NSDate alloc] init];
+                 // voila!
+                 
+                 dateFromString = [dateFormatter dateFromString:dateString];
+                 
+                 [dates addObject:[NSNumber numberWithInt:[dateFromString day]]];
+                 
+                 dateFromString = nil;
+                 
+             }
+             [self.calendar markDates:dates];
              
-             [calendar.delegate calendarView:calendar switchedToMonth:[[NSDate date] month] targetHeight:tempTargetHeight animated:YES];
-
+             
+             
              
              
          }
          else if ([data length] == 0 && error == nil)
          {
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Error"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"No hay eventos, intenta de nuevo.";
-             [[[SlideNavigationController sharedInstance] HUD] hide:YES afterDelay:1.5];
+             [self.appDelegate showGlobalProgressHUDWithTitle:@"No hay eventos, intenta de nuevo."];
+             [self.appDelegate dismissGlobalHUDWithDelay:1.5f];
              
              NSLog(@"Nothing was downloaded.");
          }
-         else if (error != nil){
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Error"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"Hubo un error en la comunicación, intenta de nuevo.";
+         else if (error != nil)
+         {
+             [self.appDelegate showGlobalProgressHUDWithTitle:@"Hubo un error en la comunicación, intenta de nuevo."];
+             [self.appDelegate dismissGlobalHUDWithDelay:1.5f];
              
              NSLog(@"Error = %@", error);
          }
          
      }];
-
+    
 }
 
-    
+
 
 
 - (void)didReceiveMemoryWarning
@@ -139,48 +162,22 @@
 }
 
 
--(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
-    tempTargetHeight = targetHeight;
-    NSMutableArray *dates = [[NSMutableArray alloc] init];
-    
-    for (int i=0; i<[appDelegate.eventsFeed count]; i++) {
-        NSString *dateString = [[appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"start"];
-      
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        // this is imporant - we set our input date format to match our input string
-        // if format doesn't match you'll get nil from your string, so be careful
-        [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss ZZZ"];
-        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-
-        NSDate *dateFromString = [[NSDate alloc] init];
-        // voila!
-        
-        dateFromString = [dateFormatter dateFromString:dateString];
-
-        if (month==[[NSDate date] month]) {
-            [dates addObject:[NSNumber numberWithInt:[dateFromString day]]];
-        }
-        
-        dateFromString = nil;
-
-    }
-    [calendarView markDates:dates];
-
-    
-
+-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(NSDate *)monthDate targetHeight:(float)targetHeight animated:(BOOL)animated {
+    self.tempTargetHeight = targetHeight;
+    [self getEventsWithDate:monthDate];
     
     
-   
+    
 }
+
 //TODO: Update event list with new month and new alert with event details
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     
     NSLog(@"Selected date = %@",date);
+    UIAlertView *alert;
     
-    NSMutableArray *dates = [[NSMutableArray alloc] init];
-    
-    for (int i=0; i<[appDelegate.eventsFeed count]; i++) {
-        NSString *dateString = [[appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"start"];
+    for (int i=0; i<[self.appDelegate.eventsFeed count]; i++) {
+        NSString *dateString = [[self.appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"start"];
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         // this is imporant - we set our input date format to match our input string
@@ -194,9 +191,9 @@
         dateFromString = [dateFormatter dateFromString:dateString];
         
         if ([date day]==[dateFromString day]) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[[appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"title"]  message:[[appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"description"]  delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            alert = [[UIAlertView alloc] initWithTitle:[[self.appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"title"]  message:[[self.appDelegate.eventsFeed objectAtIndex:i] objectForKey:@"description"]  delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
             [alert show];
-            
+
         }
         
         dateFromString = nil;

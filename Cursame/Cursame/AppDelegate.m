@@ -49,7 +49,7 @@
 {
     cursameResponse =[[CursameResponse alloc]init];
     publicationsFeed =[[NSMutableArray alloc]init];
-    eventsFeed =[[NSMutableArray alloc]init];
+    eventsFeed =[[[NSMutableArray alloc]init] mutableCopy];
 
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
 															 bundle: nil];
@@ -104,6 +104,30 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//AppDelegate class methods
+
+- (MBProgressHUD *)showGlobalProgressHUDWithTitle:(NSString *)title {
+    [MBProgressHUD hideAllHUDsForView:self.window animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+    hud.labelText = title;
+    hud.color = [UIColor colorWithRed:0.095 green:0.103 blue:0.115 alpha:1.000];
+    return hud;
+}
+
+- (void)dismissGlobalHUD
+{
+    //sleep(3);
+    [MBProgressHUD hideHUDForView:self.window animated:YES];
+    
+}
+
+- (void)dismissGlobalHUDWithDelay:(float)delay
+{
+    sleep(delay);
+    [MBProgressHUD hideHUDForView:self.window animated:YES];
+    
 }
 
 @end

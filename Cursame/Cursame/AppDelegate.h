@@ -12,12 +12,14 @@
 #import "CursameResponse.h"
 #import "Publications.h"
 #import "CursameEvents.h"
+#import <MBProgressHUD.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, MBProgressHUDDelegate>
 {
     CursameResponse *cursameResponse;
     NSMutableArray *publicationsFeed;
     NSMutableArray *eventsFeed;
+    
 
 }
 
@@ -25,5 +27,10 @@
 @property (strong, nonatomic) CursameResponse *cursameResponse;
 @property (strong, nonatomic) NSMutableArray *publicationsFeed;
 @property (strong, nonatomic) NSMutableArray *eventsFeed;
+@property (strong, nonatomic) NSMutableDictionary *mainFeed;
+
+- (MBProgressHUD *)showGlobalProgressHUDWithTitle:(NSString *)title;
+- (void)dismissGlobalHUD;
+- (void)dismissGlobalHUDWithDelay:(float)delay;
 
 @end

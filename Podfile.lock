@@ -1,0 +1,16 @@
+PODS:
+  - AMBubbleTableViewController (0.5.1)
+  - MBProgressHUD (0.8)
+  - MHTabBarController (0.0.1)
+
+DEPENDENCIES:
+  - AMBubbleTableViewController
+  - MBProgressHUD
+  - MHTabBarController
+
+SPEC CHECKSUMS:
+  AMBubbleTableViewController: 18aef01dbbf80630e3a90518f4a81ba7a799da74
+  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
+  MHTabBarController: f05207a59dc13bbd5960e1080adb050cd61d9cad
+
+COCOAPODS: 0.29.0

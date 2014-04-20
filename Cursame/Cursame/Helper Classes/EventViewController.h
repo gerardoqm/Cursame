@@ -14,8 +14,9 @@
 @interface EventViewController : UIViewController <SlideNavigationControllerDelegate,VRGCalendarViewDelegate>
 
 {
-    AppDelegate *appDelegate;
-    VRGCalendarView *calendar;
-    float tempTargetHeight;
+    
 }
+@property (nonatomic,strong) AppDelegate *appDelegate;
+@property (nonatomic,strong) VRGCalendarView *calendar;
+@property (nonatomic) float tempTargetHeight;
 @end

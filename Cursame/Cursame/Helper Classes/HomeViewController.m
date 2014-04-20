@@ -16,7 +16,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    self.appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
 
     testLabel.text = @"TEST";
     //https://pruebas.cursa.me/api/api/publications.json?type=Network&auth_token=LvsBEYzoxWXokjwZZCY3&limit=20&page=3
@@ -36,10 +37,9 @@
     NSString *token = [prefs stringForKey:@"token"];
     
     
-	[[SlideNavigationController sharedInstance] HUD].labelText = @"Cargando publicaciones";
+    [_appDelegate showGlobalProgressHUDWithTitle:@"Cargando publicaciones"];
     
 	
-	[[[SlideNavigationController sharedInstance] HUD] show:YES ];
 
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
@@ -67,11 +67,11 @@
 
              //TODO: Interpretar respuesta
              NSDictionary *JSONData       = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonParsingError];
-             appDelegate.publicationsFeed = [JSONData objectForKey:@"publications"];
+             _appDelegate.publicationsFeed = [JSONData objectForKey:@"publications"];
 
              [homeTableView reloadData];
 
-             [[[SlideNavigationController sharedInstance] HUD] hide:YES];
+             [_appDelegate dismissGlobalHUD];
 
              
              
@@ -79,16 +79,16 @@
          }
          else if ([data length] == 0 && error == nil)
          {
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Error"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"No hay publicaciones, intenta de nuevo.";
-             [[[SlideNavigationController sharedInstance] HUD] hide:YES afterDelay:1.5];
-             
+             [_appDelegate showGlobalProgressHUDWithTitle:@"No hay publicaciones, intenta de nuevo."];
+             [_appDelegate dismissGlobalHUDWithDelay:1.5f];
+
              NSLog(@"Nothing was downloaded.");
          }
          else if (error != nil){
-             [[SlideNavigationController sharedInstance] HUD].customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Error"]];
-             [[SlideNavigationController sharedInstance] HUD].labelText = @"Hubo un error en la comunicación, intenta de nuevo.";
-             
+
+             [_appDelegate showGlobalProgressHUDWithTitle:@"Hubo un error en la comunicación, intenta de nuevo."];
+             [_appDelegate dismissGlobalHUDWithDelay:1.5f];
+
              NSLog(@"Error = %@", error);
          }
          
@@ -103,12 +103,6 @@
 
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu
 {
-	return YES;
-}
-
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu
-{
-    self.view.backgroundColor = [UIColor colorWithRed:0.692 green:1.000 blue:0.827 alpha:1.000];
 	return YES;
 }
 
@@ -130,7 +124,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [appDelegate.publicationsFeed count];
+    return [_appDelegate.publicationsFeed count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -163,7 +157,7 @@
     }
     
     
-    NSDictionary *publication = [appDelegate.publicationsFeed objectAtIndex:[indexPath section]];
+    NSDictionary *publication = [_appDelegate.publicationsFeed objectAtIndex:[indexPath section]];
     
 //    NSDictionary *publicationDetails = [publication objectForKey:@"publication"];
 //    NSDictionary *user = [tweet objectForKey:@"user"];

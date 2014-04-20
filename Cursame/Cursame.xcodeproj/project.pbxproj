@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2282F28A78AC4B7488596975 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 541A6CE432A3495A9569B0FA /* libPods.a */; };
 		DA0833E418C040FA00C9E9E5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0833E318C040FA00C9E9E5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA4B626F18F641A700ADB4C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B626E18F641A700ADB4C7 /* AVFoundation.framework */; };
+		DA4B627118F641B800ADB4C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B627018F641B800ADB4C7 /* MediaPlayer.framework */; };
+		DA4B627418F646AA00ADB4C7 /* horizontal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4B627218F646AA00ADB4C7 /* horizontal.mp4 */; };
+		DA4B627518F646AA00ADB4C7 /* vertical.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4B627318F646AA00ADB4C7 /* vertical.mp4 */; };
 		DAB4A19418C594C10028FA1B /* Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A13E18C594C00028FA1B /* Avatar.m */; };
 		DAB4A19518C594C10028FA1B /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14018C594C00028FA1B /* Comments.m */; };
 		DAB4A19618C594C10028FA1B /* Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4A14218C594C00028FA1B /* Compress.m */; };
@@ -58,7 +63,6 @@
 		DAD1140B18DA9EA700E703F7 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1140618DA9EA600E703F7 /* VRGCalendarView.m */; };
 		DAD1141B18DAA02D00E703F7 /* CursameEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1141718DAA02D00E703F7 /* CursameEvents.m */; };
 		DAD1141C18DAA02D00E703F7 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD1141A18DAA02D00E703F7 /* Results.m */; };
-		DAF045F418B04E12008C58AF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF045F318B04E12008C58AF /* MBProgressHUD.m */; };
 		DAF6146B18A9A2060020DC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146A18A9A2060020DC23 /* Foundation.framework */; };
 		DAF6146D18A9A2060020DC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146C18A9A2060020DC23 /* CoreGraphics.framework */; };
 		DAF6146F18A9A2060020DC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6146E18A9A2060020DC23 /* UIKit.framework */; };
@@ -101,8 +105,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		541A6CE432A3495A9569B0FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		745D93D2CC024902A02E4DA7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DA0833E218C040FA00C9E9E5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		DA0833E318C040FA00C9E9E5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		DA4B626E18F641A700ADB4C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA4B627018F641B800ADB4C7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DA4B627218F646AA00ADB4C7 /* horizontal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = horizontal.mp4; sourceTree = "<group>"; };
+		DA4B627318F646AA00ADB4C7 /* vertical.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vertical.mp4; sourceTree = "<group>"; };
 		DAB4A13D18C594C00028FA1B /* Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Avatar.h; sourceTree = "<group>"; };
 		DAB4A13E18C594C00028FA1B /* Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Avatar.m; sourceTree = "<group>"; };
 		DAB4A13F18C594C00028FA1B /* Comments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comments.h; sourceTree = "<group>"; };
@@ -207,8 +217,6 @@
 		DAD1141918DAA02D00E703F7 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
 		DAD1141A18DAA02D00E703F7 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
 		DAF045EF18AC396B008C58AF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		DAF045F218B04E12008C58AF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		DAF045F318B04E12008C58AF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		DAF6146718A9A2060020DC23 /* Cursame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cursame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6146A18A9A2060020DC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAF6146C18A9A2060020DC23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -262,10 +270,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4B627118F641B800ADB4C7 /* MediaPlayer.framework in Frameworks */,
+				DA4B626F18F641A700ADB4C7 /* AVFoundation.framework in Frameworks */,
 				DAF614E218AA02840020DC23 /* QuartzCore.framework in Frameworks */,
 				DAF6146D18A9A2060020DC23 /* CoreGraphics.framework in Frameworks */,
 				DAF6146F18A9A2060020DC23 /* UIKit.framework in Frameworks */,
 				DAF6146B18A9A2060020DC23 /* Foundation.framework in Frameworks */,
+				2282F28A78AC4B7488596975 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +436,6 @@
 			children = (
 				DAD1140C18DA9EAD00E703F7 /* Vurig Calendar */,
 				DA0833E118C040EE00C9E9E5 /* JSONKit */,
-				DAF045F518B04E1D008C58AF /* MBProgressHUD */,
 				DAF045F118B04DF4008C58AF /* Slide Navigation */,
 			);
 			name = "Third Party";
@@ -437,15 +447,6 @@
 				DAF614C718AA02140020DC23 /* Source */,
 			);
 			name = "Slide Navigation";
-			sourceTree = "<group>";
-		};
-		DAF045F518B04E1D008C58AF /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				DAF045F218B04E12008C58AF /* MBProgressHUD.h */,
-				DAF045F318B04E12008C58AF /* MBProgressHUD.m */,
-			);
-			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		DAF0463018B170B6008C58AF /* JSON */ = {
@@ -465,6 +466,7 @@
 				DAF6149218A9A2070020DC23 /* CursameTests */,
 				DAF6146918A9A2060020DC23 /* Frameworks */,
 				DAF6146818A9A2060020DC23 /* Products */,
+				745D93D2CC024902A02E4DA7 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -480,11 +482,14 @@
 		DAF6146918A9A2060020DC23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA4B627018F641B800ADB4C7 /* MediaPlayer.framework */,
+				DA4B626E18F641A700ADB4C7 /* AVFoundation.framework */,
 				DAF614E118AA02840020DC23 /* QuartzCore.framework */,
 				DAF6146A18A9A2060020DC23 /* Foundation.framework */,
 				DAF6146C18A9A2060020DC23 /* CoreGraphics.framework */,
 				DAF6146E18A9A2060020DC23 /* UIKit.framework */,
 				DAF6148C18A9A2070020DC23 /* XCTest.framework */,
+				541A6CE432A3495A9569B0FA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -497,9 +502,11 @@
 				DAF6147A18A9A2060020DC23 /* AppDelegate.m */,
 				DAF045EF18AC396B008C58AF /* Constants.h */,
 				DAF045F018B04DE2008C58AF /* Third Party */,
-				DAF614B718AA02050020DC23 /* Helper Classes */,
+				DAF614B718AA02050020DC23 /* View Controllers */,
 				DAF6148518A9A2070020DC23 /* Images.xcassets */,
 				DAF614D418AA02140020DC23 /* Assets */,
+				DAF614A218AA01D20020DC23 /* MainStoryboard_iPad.storyboard */,
+				DAF614A418AA01D20020DC23 /* MainStoryboard_iPhone.storyboard */,
 				DAF6147118A9A2060020DC23 /* Supporting Files */,
 			);
 			path = Cursame;
@@ -508,8 +515,8 @@
 		DAF6147118A9A2060020DC23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAF614A218AA01D20020DC23 /* MainStoryboard_iPad.storyboard */,
-				DAF614A418AA01D20020DC23 /* MainStoryboard_iPhone.storyboard */,
+				DA4B627218F646AA00ADB4C7 /* horizontal.mp4 */,
+				DA4B627318F646AA00ADB4C7 /* vertical.mp4 */,
 				DAF6147218A9A2060020DC23 /* Cursame-Info.plist */,
 				DAF6147318A9A2060020DC23 /* InfoPlist.strings */,
 				DAF6147618A9A2060020DC23 /* main.m */,
@@ -536,7 +543,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DAF614B718AA02050020DC23 /* Helper Classes */ = {
+		DAF614B718AA02050020DC23 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DAF614B818AA02050020DC23 /* FriendsViewController.h */,
@@ -554,6 +561,7 @@
 				DAD113FA18DA9E4500E703F7 /* EventViewController.h */,
 				DAD113FB18DA9E4500E703F7 /* EventViewController.m */,
 			);
+			name = "View Controllers";
 			path = "Helper Classes";
 			sourceTree = "<group>";
 		};
@@ -602,9 +610,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAF6149C18A9A2070020DC23 /* Build configuration list for PBXNativeTarget "Cursame" */;
 			buildPhases = (
+				146A1C621C894157B59A74E8 /* Check Pods Manifest.lock */,
 				DAF6146318A9A2060020DC23 /* Sources */,
 				DAF6146418A9A2060020DC23 /* Frameworks */,
 				DAF6146518A9A2060020DC23 /* Resources */,
+				C76D36A34A724730815EDB1A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -672,9 +682,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF614A618AA01D20020DC23 /* MainStoryboard_iPad.storyboard in Resources */,
+				DA4B627418F646AA00ADB4C7 /* horizontal.mp4 in Resources */,
 				DAF614DE18AA02140020DC23 /* menu-button.png in Resources */,
 				DAF6148618A9A2070020DC23 /* Images.xcassets in Resources */,
 				DAF614A718AA01D20020DC23 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DA4B627518F646AA00ADB4C7 /* vertical.mp4 in Resources */,
 				DAF6147518A9A2060020DC23 /* InfoPlist.strings in Resources */,
 				DAF614DF18AA02140020DC23 /* menu-button@2x.png in Resources */,
 			);
@@ -689,6 +701,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		146A1C621C894157B59A74E8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C76D36A34A724730815EDB1A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAF6146318A9A2060020DC23 /* Sources */ = {
@@ -726,7 +771,6 @@
 				DAB4A19A18C594C10028FA1B /* Expanded.m in Sources */,
 				DAB4A1A018C594C10028FA1B /* Mini.m in Sources */,
 				DAB4A1AE18C594C10028FA1B /* CursameCompress.m in Sources */,
-				DAF045F418B04E12008C58AF /* MBProgressHUD.m in Sources */,
 				DAB4A1A218C594C10028FA1B /* Mosaic.m in Sources */,
 				DAB4A19E18C594C10028FA1B /* Likes.m in Sources */,
 				DAB4A1BD18C594C10028FA1B /* CursameUser.m in Sources */,
@@ -894,6 +938,7 @@
 		};
 		DAF6149D18A9A2070020DC23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745D93D2CC024902A02E4DA7 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -907,6 +952,7 @@
 		};
 		DAF6149E18A9A2070020DC23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745D93D2CC024902A02E4DA7 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -14,10 +14,11 @@
 {
     IBOutlet UILabel * testLabel;
     IBOutlet UITableView *homeTableView;
-    AppDelegate *appDelegate;
 
 
 }
+@property (nonatomic, strong) AppDelegate *appDelegate;
+
 
 -(IBAction)bounceMenu:(id)sender;
 -(void)getPublications;

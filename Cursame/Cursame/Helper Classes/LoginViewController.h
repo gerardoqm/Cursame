@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import <MediaPlayer/MPMoviePlayerController.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AVFoundation/AVPlayer.h>
 
 @interface LoginViewController : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate, UITextFieldDelegate> {
     
     IBOutlet UITextField * email;
     IBOutlet UITextField * password;
-    AppDelegate *appDelegate;
 }
+
+@property (nonatomic, strong) AppDelegate *appDelegate;
+@property (strong, nonatomic) IBOutlet UIView *controlView;
+@property (strong, nonatomic) AVPlayer *mPlayer;
 -(IBAction)login:(id)sender;
 @end
